@@ -66,7 +66,7 @@
 				<tbody>
 					<tr>
 						<td rowspan="2">Logo công ty</td>
-						<td colspan="3">{{ $new_job_list['title'] }}</td>
+						<td colspan="3"><a href="/{{ $new_job_list['province']['slug'] }}/{{ $new_job_list['industrial_zone']['slug'] }}/{{ str_slug($new_job_list['title']) }}">{{ $new_job_list['title'] }}</a></td>
 					</tr>
 					<tr>
 						<td>KCN: {{ $new_job_list['industrial_zone']['name'] }}</td>

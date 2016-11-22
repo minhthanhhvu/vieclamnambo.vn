@@ -11,17 +11,15 @@
 |
 */
 Route::singularResourceParameters();
-
+/*
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController'
 ]);
-/*
-Route::get('/', function () {
-    return view('home');
-});
 */
 Route::resource('/','HomeController');
-Route::resource('articles', 'ArticlesController');
-Route::resource('authors', 'AuthorsController');
-Route::resource('articles.recommendations', 'RecommendationsController', ['only' => ['create', 'store']]);
+
+Route::pattern('categorySlug', '[a-z\-]+');
+Route::pattern('subjectSlug', '[a-z\-]+');
+Route::pattern('pageSlug', '[a-z\-]+');
+Route::get('/{categorySlug}/{subjectSlug}/{pageSlug}', 'PageController@show');
