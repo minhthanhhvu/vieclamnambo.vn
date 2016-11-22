@@ -8,11 +8,15 @@
 </head>
 
 <body>
-	@include('shared.nav')
-	<section id="content" class="container-fluid">
-		@yield('content')
-	</section>
-	@include('shared.modal')
+	<div class="container">
+		@include('shared.nav')
+		<section id="content" class="container-fluid">
+			@yield('content')
+		</section>
+		@include('shared.modal')
+		@include('shared.footer')
+	</div>
+
 	<script type="text/javascript" src='/js/3rd-party.js'></script>
 	<script type="text/javascript" src='/js/app.js'></script>
 </body>

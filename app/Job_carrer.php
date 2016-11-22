@@ -4,7 +4,7 @@ namespace App;
 
 use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
 
-class Employer extends Eloquent
+class Job_carrer extends Model
 {
-    protected $collection = 'employers';
+    protected $collection = 'job_carrer';
 }
